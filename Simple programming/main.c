@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 
     while ((c = getc(f)) != EOF) {
         if (c == '\n') {
-            if ((curr0 % 3 == 0 && curr0 != 0) || (curr1 % 2 == 0 && curr1 != 0))
+            if (curr0 % 3 == 0 || curr1 % 2 == 0)
                 ++count;
             curr0 = curr1 = 0;
         }
