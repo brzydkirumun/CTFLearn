@@ -1,0 +1,30 @@
+First, we play clean. Wanna get to know your enemy, y'know.
+
+It turns out I'm pretty good at guessing.
+
+Not good enough to earn a milion this way though.
+
+We see the game goes as follows:
+    1) We place the bet.
+    2) We guess numbers up to ten times.
+    3) As soon as we guess correctly, we get the money.
+    4) If we fail we lose the bet.
+
+Now what does it mean we lose the bet? It means, that our balance gets updated as follows:
+
+    balance := balance - bet
+
+But as we all know subtraction is addition of the additive inverse. This brings that cool property, that subtracting a negative number means adding its abs.
+
+While we were talking i tried to break the program by inputting letters where numbers should be and giving numbers where letters are expected.
+
+When I've put a string into "Place a bet: " i got an error saying that it's an invalid literal for "int()". Error was in file "server.py"
+
+This is good. It means that the app is written in python and it uses signed integers. Which means i can place a negative bet. For example negative milion.
+
+Then all we need to do is to make sure we lose. Luckily numbers are always between 1 and 10, so if we just keep typing 11 we're guaranteed to lose.
+
+And once we lose, we get 500-(-1000000) dollars.
+And a flag. We get the flag too.
+
+Neat c:
