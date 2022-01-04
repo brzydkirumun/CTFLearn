@@ -23,6 +23,12 @@ _start:
     mov rdx, 26     ; number of characters in string to write
     syscall
 
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, adoni
+    mov rdx, 27
+    syscall
+
     mov rax, 60     ; exit system call
     mov rdi, 0
     syscall
