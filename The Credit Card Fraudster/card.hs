@@ -40,12 +40,12 @@ luhn ys = summ ys `mod` 10 == 0
 prime :: Int
 prime = 123457
 
--- 5432,1000,0000,1234 divided by 123457 wields 43999935200
+-- 5432,1000,0000,1234 divided by 123457 in N (ignoring the remainder) wields 43999935200
 -- This is our lower bound
 lower :: Int
 lower = 43999935200 * prime
 
--- 5432,1100,0000,1234 divided by 123457 wields 44000016199
+-- 5432,1100,0000,1234 divided by 123457 in N wields 44000016199
 -- This is our upper bound
 upper :: Int
 upper = 44000016199 * prime
