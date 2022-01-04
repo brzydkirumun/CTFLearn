@@ -22,6 +22,7 @@ int main(int argc, char *argv[]) {
         else if (c == '0')
             ++curr0;
     }
+
     fclose(f);
 
     printf("Number of lines in %s satisfying the property: %d", argv[1], count);
