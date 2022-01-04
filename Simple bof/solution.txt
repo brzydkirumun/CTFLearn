@@ -1,0 +1,17 @@
+On the visualization we see 32-byte block at the top, followed by 16-byte block and then two 4-byte blocks afterwards.
+
+We know that in C char is exactly one byte, so first two must be buff and padding respectively.
+
+Size of Int is not fixed in C, but we see that the two 4-byte blocks have values same as in code provided. Also: even though it's not fixed it is often 4, so we conclude that these are "secret" and "notsecret" respectively.
+
+By the way: by same I of course mean in reverse, as we see the values inputted in little endian, just as in x86 family of architectures.
+
+This is an important clue, as it means we'll have to overflow in little endian too.
+
+We see in the code that our goal is to make "secret" contain 0x67616c66. Since we're abusing gets function, we have to slice this value into four pairs of hexadecimal digits (each corresponding to one character to input).
+
+"67", "61", "6c" and "66" correspond to "galf" in ASCII. Which in reverse is "flag"... looks like we're on the right track.
+
+Now we need to overflow buffer and padding, by inputting 48 characters. Any characters. Then we just add "flag" at the end and we see that it works, we get the flag.
+
+Success c:
