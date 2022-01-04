@@ -56,8 +56,8 @@ upper = 44000016199 * prime
 cases :: [Int]
 cases =  fil2 $ fil1 $ helper lower
     where
-        fil1 = filter (\x -> x `mod` 10^4 == 1234)
-        fil2 = filter (\x -> x `div` 10^11 == 54321)
+        fil1 = filter (\x -> x `mod` 10^(4::Int) == 1234)
+        fil2 = filter (\x -> x `div` 10^(11::Int) == 54321)
         helper n = if n > upper then []
             else n:helper (n+prime)
 
