@@ -1,0 +1,14 @@
+The very name of the challenge highly suggests what one should do.
+
+First we go
+
+$ binwalk PurpleThing.jpeg
+
+We see two pictures inside, so one is hidden.
+Now we go
+
+$ binwalk -D='.*' PurpleThing.jpeg
+
+And one of the extracted pictures contains flag.
+
+Neat c:
