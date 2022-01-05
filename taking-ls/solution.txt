@@ -1,0 +1,7 @@
+This problem is basic and for any linux user it should be no problem to solve it.
+
+Just go with 
+
+$ ls -a
+
+you'll see a dotfolder, inside there will be a textfile with password to the pdf, that's it.
