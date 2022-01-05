@@ -1,0 +1,12 @@
+As the very name suggests, flag is encrypted using Vigenere cipher.
+
+It's a pretty basic cipher but still is enjoyable. 
+I decided to go with C as in it chars are simply numbers so it is easier to perform arithmetic on them. 
+For more complex cipher I'd definetly go with haskell, but here even if errors occured, they'd be easily debuggable.
+
+First I took a peek at the codetext to see how was the cipher implemented. It consisted only of letters, both lower and uppercase and of curly braces. What's more: opening curly braces were fifth character (after 4 others, presumably: "flag") and the string ended with closed curly braces which led me to think that they were probably not encrypted at all.
+
+So our cipher ignores all non-alphabetical characters and handles both lower and uppercase letters.
+The way uppercase letters were sprinkled in the text led me to believe that it is a classic Vigenere cipher, with little tweek, that it encrypts lowercase into lowercase and uppercase into uppercase.
+
+
