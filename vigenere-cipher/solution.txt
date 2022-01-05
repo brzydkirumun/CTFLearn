@@ -4,9 +4,30 @@ It's a pretty basic cipher but still is enjoyable.
 I decided to go with C as in it chars are simply numbers so it is easier to perform arithmetic on them. 
 For more complex cipher I'd definetly go with haskell, but here even if errors occured, they'd be easily debuggable.
 
-First I took a peek at the codetext to see how was the cipher implemented. It consisted only of letters, both lower and uppercase and of curly braces. What's more: opening curly braces were fifth character (after 4 others, presumably: "flag") and the string ended with closed curly braces which led me to think that they were probably not encrypted at all.
+First I took a peek at the codetext to see how was the cipher implemented. It consisted only of letters, both lower and uppercase and of curly braces. What's more: opening curly brace was fifth character (after 4 others, presumably: "flag") and the string ended with closed curly brace which led me to think that they were probably not encrypted at all.
 
 So our cipher ignores all non-alphabetical characters and handles both lower and uppercase letters.
 The way uppercase letters were sprinkled in the text led me to believe that it is a classic Vigenere cipher, with little tweek, that it encrypts lowercase into lowercase and uppercase into uppercase.
 
+General formula for encryption in Vigenere cipher goes as follows:
 
+    E[x_i | K] = (x_i + k_{i mod |K|} ) mod n
+where n   - number of letters in alphabet.
+      x_i - i-th character of the plaintext
+      k_i - i-th character of the key
+      |K| - length of the key
+
+To decipher it we use property that addition mod n of integers is invertable as (Z_n, +_n) forms a group.
+Hence our decryption formula:
+
+    D[y_i | K] = (y_i - k_{i mod |K|} ) mod n
+where y_i - i-th character of the codetext
+
+Now since in C modulo can give negative result, we also add n to the subtraction under modulo to make sure the result comes out positive.
+Since we're only dealing with letters, our n is equal to 26.
+
+Now all we do is write program that is capable of performing given operations on subsequent characters of the string with a given key and voila!
+
+We've got the flag.
+
+Neat c:
