@@ -1,6 +1,6 @@
 In this one first idea that comes to mind is that flag is hidden somwhere inside the file as a string. 
 
-Was it not a basic level challenge I'd think of stenography, but it's worth trying strings first.
+Was it not a basic level challenge I'd think of binwalking or stenography, but it's worth trying strings first.
 
 And thus we write in command line:
 
