@@ -1,1 +1,7 @@
 Of course this would be easiest to just put into some online decoder, but i figured it might be fun to write one myself.
+
+It wasn't fun, it was boring, but I did it anyway.
+
+And it works. And we get the flag.
+
+Neat c:
