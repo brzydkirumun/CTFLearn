@@ -1,0 +1,11 @@
+In this one first idea that comes to mind is that flag is hidden somwhere inside the file as a string. 
+
+Was it not a basic level challenge I'd think of stenography, but it's worth trying strings first.
+
+And thus we write in command line:
+
+$ strings 95f6edfb66ef42d774a5a34581f19052.jpg | grep -i -E 'ctf|flag'
+
+It just so happens it gives us our flag.
+
+Neat c:
