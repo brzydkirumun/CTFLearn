@@ -6,7 +6,7 @@ module Card where
 
 -- Because 0 is the neutral element of addition in N and
 -- for every x in N: [x * 0 = 0] i substituted 0s in place
--- of the stars.
+-- of the stars. We'll use it in ghci for testing.
 cardNeutral :: [Int]
 cardNeutral = [5,4,3,2,1,0,0,0,0,0,0,0,1,2,3,4]
 
