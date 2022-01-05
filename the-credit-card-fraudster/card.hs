@@ -21,7 +21,7 @@ sumdig n = n `seq` n `mod` 10 + sumdig (n `div` 10)
 
 -- Summation for Luhn algorithm
 summ :: [Int] -> Int
-summ = foldr ((+) . (\(x,y) -> sumdig(x*y))) 0 . zip (go 1)
+summ = foldr ((+) . (\(x,y) -> sumdig (x*y))) 0 . zip (go 1)
 
 -- Generating infinite list [2, 1, 2, 1, 2, 1, ...]
 go :: Int -> [Int]
