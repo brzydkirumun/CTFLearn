@@ -4,6 +4,8 @@ This repo consists of solutions to some of the CTFlearn problems that I've done.
 
 Nevertheless plz guys, do stuff by yourself. It has "learn" in its name for a reason, copying and pasting teaches you nothing.
 
+_I will rewrite all the "solution.txt" files into either LaTeX or Markdown one day, I promise_
+
 ## Pull requests
 I may accept some pull requests, but not with solutions to problems I haven't done myself yet, only those that either fix some mistakes of mine (and there will probably be plenty) or provide new approach to challenge I've already solved. Otherwise it would ruin my fun, so no spoilers please c:
 
