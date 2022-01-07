@@ -31,9 +31,9 @@ It is easy to look up, that _123457_ is a prime number. We will have to brutefor
 
 First we want to find lower and upper bound for our search. We know that the number takes form _543210XXXXXX1234_ and hence it is:
 1. greater or equal to _5432100000001234_
-2. less than or equal to _5432101000001234_
+2. less than or equal to _5432109999991234_
 
-But we also know that we're interested solely in numbers that are divisible by _123457_, hence we divide our bounds by the prime ignoring the reminder. We get _43999935200_ from the lower and _43999943300_ from the upper.
+But we also know that we're interested solely in numbers that are divisible by _123457_, hence we divide our bounds by the prime ignoring the reminder. We get _43999935200_ from the lower and _44000016199_ from the upper.
 
 When we multiply these results by the prime again, we will get the actual, easy to work with, and divisible by _123457_ numbers, which in code are called `lower` and `upper` respectively.
 
@@ -47,4 +47,3 @@ Then we write function `result` that finds all results. It first calls `cases`, 
 We then just call `result` in ghci. Since this is a CTF problem we're lucily left only with one possible solution, that we can input as our answer.
 
 ## Neat c:
-neat c:

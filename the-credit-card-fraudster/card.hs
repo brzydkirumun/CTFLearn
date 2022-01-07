@@ -42,7 +42,7 @@ lower :: Int
 lower = 43999935200 * prime
 
 upper :: Int
-upper = 43999943300 * prime
+upper = 44000016199 * prime
 
 cases :: [Int]
 cases =  fil2 $ fil1 $ helper lower
